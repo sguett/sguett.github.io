@@ -5,11 +5,46 @@
     <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <META HTTP-EQUIV="Expires" CONTENT="-1">
     <title></title>
+    <script>
+                const users = [
+            {
+                username: 'samuel',
+                email: 'samuel@gmail.com'
+            },
+            {
+                username: 'michel',
+                email: 'michel@gmail.com'
+            }
+        ];
+        const validateform = (param) => {
+        //   const fn = document.getElementById('fruitname'); // make that if we don't use this method
+        const fn = param.users;
+        const jsonusers = JSON.stringify(users);
+        fn.value = jsonusers;
+        return true;
+        }
+    </script>
   </head>
   <body>
-    <form action="https://www.google.com/search" method="GET">
-      <input type="text" name="q" value="">
+    <!-- Banana or Cherry: -->
+    <!-- <form action="https://zivuch.github.io/formdata.html" method="GET" onsubmit="return validateform(this)">
+      <input type="text" name="fruitname" value="" id="fruitname">
       <input type="submit" name="" value="Submit">
-    </form>
+    </form> -->
+    Users:
+    <form action="formdata.html" method="GET" onsubmit="return validateform(this)">
+        <input type="text" name="users" value="" id="fruitname">
+        <input type="submit" name="" value="Submit">
+      </form>
   </body>
 </html>
+
+
+
+<!--
+required
+pattern example pattern="[Bb]anana|[Cc]herry"
+text - minlength and maxlength
+number - min and max
+validation - js validation - built-in validation
+-->

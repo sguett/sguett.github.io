@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      var entries = urlParams.entries();
+      for(pair of entries) {
+        console.log(pair[0], pair[1]);
+        const arr = JSON.parse(pair[1])
+        console.log(arr)
+      }
+    </script>
+  </body>
+</html>
