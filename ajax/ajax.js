@@ -8,7 +8,9 @@ xhr.open('GET', 'https://sguett.github.io/ajax/data.json');
 // step 3
 xhr.send();
 
-xhr.responseType = 'json'; // json (4)
+xhr.responseType = 'json'; // for json file (4)
+xhr.responseType = 'XML'; // for xml file (5)
+
 
 xhr.onload = function () {
     if (xhr.status != 200) {
@@ -20,7 +22,7 @@ xhr.onload = function () {
         // console.log(JSON.parse(xhr.response))
         // const data = JSON.parse(xhr.response) if we don't specify (4)
         // console.log("username=",data[1].username) if we don't specify (4)
-        console.log("username=",xhr.response)
+        console.log(xhr.response)
         // document.getElementById('root').innerHTML = data
     }
 }
