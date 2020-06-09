@@ -1,16 +1,13 @@
 // step 1
-let xhrJSON = new XMLHttpRequest();
-let xhrRobot = new XMLHttpRequest();
+let xhr = new XMLHttpRequest();
 // step 2
-xhrJSON.open('GET', 'https://jsonplaceholder.typicode.com/users');
-xhrRobot.open('GET', 'https://robohash.org/');
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
 // step 3
-xhrJSON.send();
-xhrRobot.send();
+xhr.send();
 
-xhrJSON.responseType = 'json'; // for json file (4)
+xhr.responseType = 'json'; // for json file (4)
 
-xhrJSON.onload = function () {
+xhr.onload = function () {
     if (xhr.status != 200) {
         console.log(`Error: ${xhr.status}: ${xhr.statusText}`)
     }
