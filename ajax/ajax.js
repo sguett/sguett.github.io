@@ -3,7 +3,7 @@ let xhr = new XMLHttpRequest();
 
 // step 2
 // xhr.open('GET', 'https://sguett.github.io/ajax/data.html');
-xhr.open('GET', 'https://sguett.github.io/ajax/data.json');
+xhr.open('GET', 'https://sguett.github.io/ajax/data.xml');
 
 // step 3
 xhr.send();
