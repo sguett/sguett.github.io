@@ -12,7 +12,7 @@ xhr.onload = function () {
         console.log(`Error: ${xhr.status}: ${xhr.statusText}`)
     }
     else {
-        Built(xhr.response)
+        built(xhr.response)
         // console.log(xhr.response)
     }
 }
@@ -31,7 +31,7 @@ xhr.onerror = function () {
 };
 
 const built = (arr) => {
-    const root = document.getElementById('root')
+    const root = document.getElementById("root")
     arr.forEach((item,i) => {
         let div = document.createElement("div");
         let h1 = document.createElement("h1");
