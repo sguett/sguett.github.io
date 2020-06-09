@@ -12,19 +12,21 @@ xhr.onload = function () {
         console.log(`Error: ${xhr.status}: ${xhr.statusText}`)
     }
     else {
-        console.log(xhr.response)
+        const data = xhr.response
+        // console.log(xhr.response)
+        document.getElementById('root').innerHTML = data
     }
 }
 
 xhr.onprogress = function (event) {
     if (event.lengthComputable) {
-        alert(`Received ${event.loaded} of ${event.total} bytes`);
+        console.log(`Received ${event.loaded} of ${event.total} bytes`);
     } else {
-        alert(`Received ${event.loaded} bytes`); // no Content-Length
+        console.log(`Received ${event.loaded} bytes`); // no Content-Length
     }
 
 };
 
 xhr.onerror = function () {
-    alert("Request failed");
+    console.log("Request failed");
 };
