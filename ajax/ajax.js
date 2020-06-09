@@ -9,7 +9,7 @@ xhr.open('GET', 'https://sguett.github.io/ajax/data.json');
 xhr.send();
 
 xhr.responseType = 'json'; // for json file (4)
-xhr.responseType = 'XML'; // for xml file (5)
+xhr.responseType = 'document'; // for xml file (5)
 
 
 xhr.onload = function () {
