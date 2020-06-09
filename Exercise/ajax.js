@@ -17,7 +17,8 @@ xhr.onload = function () {
         // const data = JSON.parse(xhr.response) if we don't specify (4)
         // console.log("username=",data[1].username) if we don't specify (4)
         for (val in xhr.response){
-            console.log(val)
+            console.log(xhr.response[val].name)
+            
         }
         // console.log(xhr.response)
     }
