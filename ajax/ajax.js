@@ -23,6 +23,8 @@ xhr.onload = function () {
         // const data = JSON.parse(xhr.response) if we don't specify (4)
         // console.log("username=",data[1].username) if we don't specify (4)
         console.log(xhr.response)
+        const data = xhr.response;
+        console.log(data.getElementsByTagName('user')); // if we use XML (5)
         // document.getElementById('root').innerHTML = data
     }
 }
