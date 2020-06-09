@@ -2,7 +2,8 @@
 let xhr = new XMLHttpRequest();
 
 // step 2
-xhr.open('GET', 'https://sguett.github.io/ajax/data.html');
+// xhr.open('GET', 'https://sguett.github.io/ajax/data.html');
+xhr.open('GET', 'https://sguett.github.io/ajax/data.json');
 
 // step 3
 xhr.send();
@@ -12,9 +13,10 @@ xhr.onload = function () {
         console.log(`Error: ${xhr.status}: ${xhr.statusText}`)
     }
     else {
-        const data = xhr.response
-        // console.log(xhr.response)
-        document.getElementById('root').innerHTML = data
+        // const data = xhr.response
+        console.log(xhr.response)
+        console.log(JSON.parse(xhr.response))
+        // document.getElementById('root').innerHTML = data
     }
 }
 
