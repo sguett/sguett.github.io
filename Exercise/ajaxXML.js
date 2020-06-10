@@ -34,13 +34,17 @@ xhr.onerror = function () {
 
 const built = (arr) => {
     const root = document.getElementById("root")
-    var table = "<tr><th>to</th><th>from</th></tr>";
+    var table = "<tr><th>to</th><th>from</th><th>heading</th><th>body</th></tr>";
     var x = arr.getElementsByTagName("email");
     for (i = 0; i < x.length; i++) {
         table += "<tr><td>" +
             x[i].getElementsByTagName("to")[0].childNodes[0].nodeValue +
             "</td><td>" +
             x[i].getElementsByTagName("from")[0].childNodes[0].nodeValue +
+            "</td></tr>"+
+            x[i].getElementsByTagName("heading")[0].childNodes[0].nodeValue +
+            "</td></tr>"+
+            x[i].getElementsByTagName("body")[0].childNodes[0].nodeValue +
             "</td></tr>";
     }
     root.innerHTML = table;
