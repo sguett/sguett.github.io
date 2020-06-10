@@ -41,9 +41,9 @@ const built = (arr) => {
             x[i].getElementsByTagName("to")[0].childNodes[0].nodeValue +
             "</td><td>" +
             x[i].getElementsByTagName("from")[0].childNodes[0].nodeValue +
-            "</td></tr>"+
+            "</td><td>"+
             x[i].getElementsByTagName("heading")[0].childNodes[0].nodeValue +
-            "</td></tr>"+
+            "</td><td>"+
             x[i].getElementsByTagName("body")[0].childNodes[0].nodeValue +
             "</td></tr>";
     }
